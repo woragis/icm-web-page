@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { StyledUsersComponent, StyledUsers, StyledUser } from "./style";
 import LoadingComponent from "../../components/Loading";
-import { UserDataType } from "../../types/frofiles";
+import { UserDataType } from "../../types/profiles";
 import { urlPrefix } from "../../envVariables";
 
 const User = ({ user_id, member_id, email, password }: UserDataType) => {
