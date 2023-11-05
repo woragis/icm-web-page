@@ -1,9 +1,10 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { StyledHeader, StyledNav } from "./style";
-import pages from "../../../pages/pagesData";
-import { Page } from "../../../types/pages";
-import { useState } from "react";
+// import pages from "../../../pages/pagesData";
+// import { Page } from "../../../types/pages";
+// import { useState } from "react";
 import { useAuth } from "../../../contexts/AuthContext";
+import Profile from "../../Profile";
 
 const ProfileUnloggedOptions = () => {
   return (
@@ -27,7 +28,7 @@ const ProfileLoggedOptions = () => {
   );
 };
 const ProfileComponent = () => {
-  const { isLogged, toggleLoginLogin, toggleLoginLogout } = useAuth();
+  const { isLogged, toggleLoginLogin } = useAuth();
   return (
     <>
       {isLogged ? <ProfileLoggedOptions /> : <ProfileUnloggedOptions />}
@@ -56,7 +57,7 @@ const Header = () => {
 
   return (
     <StyledHeader>
-      <ProfileComponent />
+      <Profile />
       <StyledNav>
         <ul>{navigation}</ul>
       </StyledNav>
